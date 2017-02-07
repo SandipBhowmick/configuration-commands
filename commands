@@ -1,0 +1,192 @@
+
+http://railsapps.github.io/installrubyonrails-ubuntu.html
+https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
+#4 and 5 lines are for the first time
+sudo apt-get remove git    
+sudo apt-get install git
+
+
+
+1. Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, 
+or gitignore files. You can add these files after your project has been pushed to GitHub.
+
+2. Open Terminal.
+
+3. Change the current working directory to your local project.
+
+4. Initialize the local directory as a Git repository. 
+
+$ git init
+
+5. Add the files in your new local repository. This stages them for the first commit.
+
+$ git add .
+# Adds the files in the local repository and stages them for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
+
+6. Commit the files that you've staged in your local repository.
+
+$ git commit -m "First commit"
+# Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+
+7. In Terminal, add the URL for the remote repository where your local repository will be pushed.
+
+$ git remote add origin remote repository URL from git
+
+8. # Sets the new remote
+
+$ git remote -v
+# Verifies the new remote URL
+
+9. Push the changes in your local repository to GitHub.
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Create a Git branch
+
+
+
+From your terminal window, list the branches on your repository.
+1. $ git branch
+
+This output indicates there is a single branch, the master and the asterisk indicates it is currently active.
+Create a new feature branch in the repository
+2. $ git branch <feature_branch>
+
+Switch to the feature branch to work on it.
+3 $ git checkout <feature_branch>
+
+
+You can list the branches again with the git branch command.
+Commit the change to the feature branch:
+4. $ git add .
+   $ git commit -m "adding a change from the feature branch"
+   
+Switch back to the master branch.
+5. $ git checkout master
+
+Merge changes from the <feature_branch> into the master branch:
+6. $ git merge <feature_branch>
+
+Push the feature branch to Bitbucket:
+7. $ git push origin <feature_branch>
+
+8. View the Source page of your repository in Bitbucket. You should see both the master and the feature branch. When you select the feature branch, you see the Source page from that perspective. Select the feature branch to view its Recent commits.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+****more git command
+
+git init
+
+git add .   #to remove added files: git reset
+git status
+git commit -m "first Commit"
+git status
+git remote add origin https://github.com/SandipBhowmick/Ruby-on-rails-flashcards.git
+git remote -v
+git push -u origin master
+git pull 'https://github.com/SandipBhowmick/Ruby-on-rails-flashcards.git' master
+git push -u origin master
+# remove remote {git remote rm origin}
+
+git reset --hard
+---------------------------------------------------------
+MAKE CHANGES
+Review edits and cra
+ft
+a commit transaction
+$ git status
+Lists all new or modified files to be commi
+tt
+ed
+$ git add [file]
+Snapshots the file in preparation for versioning
+$ git reset [file]
+Unstages the file, but preserve its contents
+$ git diff
+Shows file di
+ff
+erences not yet staged
+$ git diff --staged
+Shows file di
+ff
+erences between staging and the last file version
+$ git commit -m "[descriptive message]"
+Records file snapshots permanently in version history
+----------------------------------------------------
+SYNCHRONIZE CHANGES
+Register a repository bookmark and exchange version history
+$ git fetch [bookmark]
+Downloads all history from the repository bookmark
+$ git merge [bookmark]/[branch]
+Combines bookmark’s branch into current local branch
+$ git push [alias] [branch]
+Uploads all local branch commits to GitHub
+$ git pull
+Downloads bookmark history and incorporates changes
+----------------------------------------------------
+CREATE REPOSITORIES
+Start a new repository or obtain one from an existing URL
+$ git init [project-name]
+Creates a new local repository with the specified name
+$ git clone [url]
+Downloads a project and its entire version history
+
+---------------------------------------------------------------------------------------
+sudo apt-get remove git
+
+sudo apt-get purge git
+sudo apt-get install git
+
+git remote -v
+git init
+git add *
+git status
+git commit -m "first Commit"
+git status
+git remote add origin https://github.com/SandipBhowmick/Ruby-on-rails-flashcards.git
+git push -u origin master
+git pull 'https://github.com/SandipBhowmick/Ruby-on-rails-flashcards.git' master
+git push -u origin master
+-------------------------------------------------------------------------------------
+
+REMOVING A REMOTE:--------
+Use the git remote rm command to remove a remote URL from your repository.
+
+The git remote rm command takes one argument:
+
+A remote name, for example, destination
+Example
+
+These examples assume you're cloning using HTTPS, which is recommended.
+
+--->  1.   git remote -v
+            # View current remotes
+            #  origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+            #   origin  https://github.com/OWNER/REPOSITORY.git (push)
+            #   destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+            #   destination  https://github.com/FORKER/REPOSITORY.git (push)
+
+      2.  git remote rm destination
+            # Remove remote
+      3.  git remote -v
+            # Verify it's gone
+            #origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+            #origin  https://github.com/OWNER/REPOSITORY.git (push)
+#Note: git remote rm does not delete the remote repository from the server. It simply removes the remote and its references from your local repository.
+#Troubleshooting
+
+#You may encounter these errors when trying to remove a remote.
+
+#Could not remove config section 'remote.[name]'
+
+#This error means that the remote you tried to delete doesn't exist:
+
+#git remote rm sofake
+#error: Could not remove config section 'remote.sofake'
+#Check that you've correctly typed the remote name.
