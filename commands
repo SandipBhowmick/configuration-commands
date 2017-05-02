@@ -190,3 +190,13 @@ These examples assume you're cloning using HTTPS, which is recommended.
 #git remote rm sofake
 #error: Could not remove config section 'remote.sofake'
 #Check that you've correctly typed the remote name.
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+Capistrano
+
+cap production deploy                       # for upload the local file to the remote server 
