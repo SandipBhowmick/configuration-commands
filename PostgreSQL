@@ -1,0 +1,15 @@
+1. sudo -u postgres psql postgres                          	/// to log in the pgsql swrver
+
+2. \l 								///for database listiong
+
+3. CREATE DATABASE myprintspace;				/// to create database in pg 
+
+4. sudo -u postgres psql myprintspace -f mps_.sql		/// to import the database inthe local server
+
+5. use database name or \connect database_name
+
+6. \dt *.* 							///list all the table
+
+7. \q								/// to close
+
+
