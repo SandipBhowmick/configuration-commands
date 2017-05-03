@@ -1,2 +1,15 @@
 http://www.quackit.com/sqlite/tutorial/backup_a_database_to_file.cfm
 http://www.ibiblio.org/elemental/howto/sqlite-backup.html
+
+
+-------------------------------------------
+The safe way to backup is to run:
+
+sqlite3 my_database.sq3
+and then:
+.backup backup_file.sq3
+
+
+Result is copy of the database. It's different from regularly file copying,
+because it takes care of any users currently working on the database.
+There are proper locks set on the database, so the backup is done exclusively.
