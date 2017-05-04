@@ -1,0 +1,29 @@
+Remove Gems: $ gem clean -Uninstall 
+ruby: $ rvm uninstall ruby (#this will uninstall all ruby's installed?) or need: -Uninstall by version:
+
+$ rvm uninstall 2.1.0 
+and others version 2.0.0 and 2.1.1
+
+
+
+
+-Uninstall rvm:
+$ rvm repair
+$ rvm cleanup
+$ rvm implode
+
+
+
+--------------------------------------------------------------------
+If the above command are not working use
+
+
+
+Just delete rvm folder (to remove rvm, rubies, gems etc.)
+
+rm -rf ~/.rvm 
+or
+rvm implode
+
+
+
