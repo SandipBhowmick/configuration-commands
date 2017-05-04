@@ -14,3 +14,11 @@ rvm install ruby_version
 rvm list
 
 rvm use ruby_version
+
+----------------------------------------
+Troubleshooting Your rvm Install
+If you open a new shell and running:
+
+  type rvm | head -1
+  
+does not show rvm is a function, RVM isn't being sourced correctly.
