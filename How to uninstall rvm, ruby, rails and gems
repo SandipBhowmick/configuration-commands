@@ -21,7 +21,7 @@ If the above command are not working use
 
 Just delete rvm folder (to remove rvm, rubies, gems etc.)
 
-rm -rf ~/.rvm 
+rm -rf ~/.rvm             #sudo rm -rf /users/your_username/.rvm
 or
 rvm implode
 
