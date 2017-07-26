@@ -17,7 +17,30 @@ heroku run rails db:migrate
 
 heroku open
 
-** If any error shows run login command (may work).
+** If any error shows run login command (may work).  
+
+https://devcenter.heroku.com/articles/getting-started-with-ruby#prepare-the-app
+
 
 database.yml
+
+default: &default
+  adapter: postgresql
+  encoding: unicode 
+  pool: 5
+
+development:
+  <<: *default
+  database: sandipblog
+
+test:
+  <<: *default
+  database: sandipblog
+
+
+production:
+  <<: *default
+  database: sandipblog
+  username: ruby-getting-started
+  password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
 
