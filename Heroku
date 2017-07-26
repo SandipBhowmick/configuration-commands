@@ -17,6 +17,8 @@ heroku run rails db:migrate
 
 heroku open
 
+heroku run rails console
+
 ** If any error shows run login command (may work).  
 
 https://devcenter.heroku.com/articles/getting-started-with-ruby#prepare-the-app
